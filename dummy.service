@@ -1,0 +1,13 @@
+[Unit]
+Description=Dummy Background Service
+After=network.target
+
+[Service]
+ExecStart=/tmp/myscripts/dummy.sh
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
